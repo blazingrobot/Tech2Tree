@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile — Tech2Tree</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="tech.png" alt="Tech2Tree Logo" onclick="window.location.href='index.html'">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="#leaderboard">Leaderboards</a></li>
+                <li><a href="#news">News</a></li>
+            </ul>
+            <div class="nav-btn">
+                <button id="loginBtn" onclick="window.location.href='index.html'">Log Out</button>
+                <div id="loginDropdown" class="login-dropdown">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Profile Section -->
+    <div class="pfp-container">
+        <section id="profile" class="profile-container">
+            <div class="profile-header-glass">
+                <img id="profilePic" src="default-profile.jpg" class="profile-pic">
+                <div class="profile-info">
+                    <h2 class="username">Jeffy Sans</h2>
+                    <p class="rank">#361</p>
+
+                    <input type="file" id="uploadPic" accept="image/*" style="display: none;">
+                    <button onclick="document.getElementById('uploadPic').click()">Change Photo</button>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <label for="progress">E-Waste Donated: 20/100</label>
+                <progress id="progress" value="20" max="100">20%</progress>
+                <span class="progress-percent">20%</span>
+            </div>
+
+            <h3>Contributions:</h3>
+            <div class="contributions-grid">
+                <div class="contribution-item">
+                    <h4>Old Smartphones</h4>
+                    <p>8 pcs</p>
+                </div>
+                <div class="contribution-item">
+                    <h4>Desktop Computers</h4>
+                    <p>2 pcs</p>
+                </div>
+                <div class="contribution-item">
+                    <h4>E-Waste Packages</h4>
+                    <p>5 packs</p>
+                </div>
+                <div class="contribution-item">
+                    <h4>Old Cables & Chargers</h4>
+                    <p>50 pcs</p>
+                </div>
+                <div class="contribution-item">
+                    <h4>Trees Named After You</h4>
+                    <p>0 trees</p>
+                </div>
+            </div>
+
+            <div class="achievements">
+                <h3>Achievements</h3>
+                <ul class="achievement-list">
+                    <li>Green Starter → Donated first e-waste item</li>
+                    <li>Collector → Collected 10+ e-waste items</li>
+                    <li>Tree Sponsor → Named a tree after donating enough</li>
+                    <li>Battery Master → Donated 20+ used batteries</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!-- QR Code Section -->
+    <div class="donate">
+        <h2>DONATE YOUR E-WASTE</h2>
+        <section id="donate" class="qr-section">
+            <h3>Your QR Code</h3>
+            <div id="qrCode"></div>
+            <p>Scan this QR code at the drop-off site to record your donation.</p>
+            <button id="regenQR">Regenerate</button>
+        </section>
+    </div>
+
+    <!-- Leaderboard Section -->
+    <div class="leaderboards">
+        <h2 class="leaderboard-title" id="leaderboard">Leaderboard</h2>
+        <div class="leaderboard-container">
+            <div class="leaderboard-entry first-place">
+                <div class="rank-icon">1</div>
+                <div class="entry-content">
+                    <div class="profile-info-leaderboard">
+                        <div class="profile-pic-leaderboard"></div>
+                        <div>
+                            <h2>MOCHIYAGA</h2>
+                            <p>"Modern Lorax type shh"</p>
+                        </div>
+                    </div>
+                    <div class="tree-count">500 <span>Trees</span></div>
+                </div>
+            </div>
+
+            <div class="leaderboard-entry second-place">
+                <div class="rank-icon">2</div>
+                <div class="entry-content">
+                    <div class="profile-info-leaderboard">
+                        <div class="profile-pic-leaderboard"></div>
+                        <div>
+                            <h2>CHEEZECAKE</h2>
+                            <p>"For the gaes"</p>
+                        </div>
+                    </div>
+                    <div class="tree-count">499 <span>Trees</span></div>
+                </div>
+            </div>
+
+            <div class="leaderboard-entry third-place">
+                <div class="rank-icon">3</div>
+                <div class="entry-content">
+                    <div class="profile-info-leaderboard">
+                        <div class="profile-pic-leaderboard"></div>
+                        <div>
+                            <h2>SECRET</h2>
+                            <p>"bye e-waste"</p>
+                        </div>
+                    </div>
+                    <div class="tree-count">30 <span>Trees</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Section -->
+    <div class="news">
+        <section id="news" class="news-container">
+            <h1>NEWS</h1>
+            <div class="news-cards">
+                <div class="news-card">
+                    <img src="img4.jpg" alt="News Image" class="news-image">
+                    <div class="news-content">
+                        <a href="newstwo.html"><span class="news-title">Tech2Trees Initiative Spurs Surge in Tree Planting and E-Waste Recycling Across Davao
+        </span></a>
+                        <p class="news-desc">
+                            A wave of environmental action is sweeping across Davao City as the Tech2Trees initiative continues to
+                gain momentum, inspiring communities to recycle e-waste in exchange for planting trees.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <img src="img5.jpg" alt="News Image" class="news-image">
+                    
+                    <div class="news-content">
+                        <a href="newsone.html"><span class="news-title">University of the Immaculate Conception, a plastic-free
+                                university</span></a>
+                        <p class="news-desc">
+                            The University of the Immaculate Conception (UIC) has been officially recognized as a
+                            “Plastic-Free School”
+                            by the environmental advocacy group Interfacing Development Interventions for Sustainability.
+                          
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <img src="img6.jpg" alt="News Image" class="news-image">
+                    <div class="news-content">
+                        <a href="newsthree.html"><span class="news-title">UIC’s CCS TECHNOSPHERE</span></a>
+                        <p class="news-desc">
+                           The University of the Immaculate Conception (UIC)
+                College of Computer Studies is set to host CCS TECHNOSPHERE: A Green Computing Drive for a Sustainable
+                Future on September 17, 2025.
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        // Profile picture upload functionality
+        const uploadInput = document.getElementById('uploadPic');
+        const profileImage = document.getElementById('profilePic');
+
+        uploadInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = () => {
+                    profileImage.src = reader.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // QR Code functionality
+        let qr;
+        let userID = 12345;
+
+        function generateQRCode(id) {
+            const qrContainer = document.getElementById('qrCode');
+            qrContainer.innerHTML = "";
+            qr = new QRCode(qrContainer, {
+                text: `USER_ID:${id}`,
+                width: 180,
+                height: 180,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        }
+
+        // Initial QR
+        generateQRCode(userID);
+
+        // Regenerate with rotation animation
+        document.getElementById('regenQR').addEventListener('click', () => {
+            const qrContainer = document.getElementById('qrCode');
+
+            // Rotate animation
+            qrContainer.style.transform = 'rotate(360deg)';
+
+            // Regenerate QR
+            const randomSuffix = Math.floor(Math.random() * 1000);
+            generateQRCode(userID + "-" + randomSuffix);
+
+            // Reset transform after animation
+            setTimeout(() => {
+                qrContainer.style.transform = 'rotate(0deg)';
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate E-Waste — Tech2Tree</title>
+  <link rel="stylesheet" href="donate.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+      <img src="tech.png" alt="Tech2Tree Logo" onclick="window.location.href='index.html'">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="donate.html#why">Why Donate?</a></li>
+        <li><a href="donate.html#location">Location</a></li>
+        <li><a href="donate.html#joinus">Join us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Intro Section -->
+<section class="MainBG" section id="why"> 
+<section class="intro">
+  <div class="intro-container">
+    <div class="intro-text">
+      <h1>Donate your E-waste now!</h1>
+      <p>Every device you drop helps reduce electronic waste, minimize pollution, 
+        and support greener solutions for our planet. 
+        Your small action contributes to cleaner communities, healthier ecosystems, 
+        and a sustainable future for generations to come. 🌱</p>
+    </div>
+    <div class="intro-image">
+      <img src="img3.png" alt="E-Waste Image">
+    </div>
+  </div>
+</section>
+</section>
+
+<!-- Drop Section -->
+<section class="container" section id="location"> 
+  <section class="drop-section">
+    <div class="drop-header">
+      <img src="drop-icon.svg" alt="" class="drop-icon">
+      <h2>Drop your E-waste here</h2>
+      <p class="subtitle">Find the nearest drop-off point in Davao City and make a difference!</p>
+    </div>
+
+    <div class="drop-cards">
+      <!-- UIC Main Campus -->
+      <div class="drop-card">
+        <img src="map1.svg" alt="UIC Main Campus">
+        <div class="drop-info">
+          <h3>UIC Main Campus</h3>
+          <p>Father Selga St., Davao City</p>
+          <button class="btn btn-directions" 
+            onclick="openMap('https://www.google.com/maps/embed?pb=!4v1726309093!6m8!1m7!1s0x32f96d7040fea619:0xc5edd89e649e05b0!2m2!1d7.0699417!2d125.6001476!3f0!4f0!5f0.7820865974627469')">
+            Get Directions
+          </button>
+        </div>
+      </div>
+
+      <!-- UIC Annex -->
+      <div class="drop-card">
+        <img src="map2.svg" alt="UIC Annex Campus">
+        <div class="drop-info">
+          <h3>UIC Annex Campus</h3>
+          <p>Bonifacio St., Poblacion District, Davao City</p>
+          <button class="btn btn-directions" 
+            onclick="openMap('https://www.google.com/maps/embed?pb=!4v1726309155!6m8!1m7!1s0x32f96d82d77dcd2b:0xbf5e3d4bd6e6b779!2m2!1d7.0669758!2d125.6123283!3f0!4f0!5f0.7820865974627469')">
+            Get Directions
+          </button>
+        </div>
+      </div>
+
+      <!-- UIC Bajada -->
+      <div class="drop-card">
+        <img src="map3.svg" alt="UIC Bajada Campus">
+        <div class="drop-info">
+          <h3>UIC Bajada Campus</h3>
+          <p>UIC Drive, Dumanlas, Bajada, Davao City</p>
+          <button class="btn btn-directions"
+            onclick="openMap('https://www.google.com/maps/embed?pb=!4vXXXXXX!6m8!1m7!1s0x32f96d6842cbb2c7:0xc83b91c2604997ea!2m2!1d7.0981398!2d125.6218107!3f0!4f0!5f0.7820865974627469')">
+            Get Directions
+          </button>
+        </div>
+      </div>
+  </section>
+</section>
+<!-- Map Modal -->
+<div id="mapModal" class="map-modal">
+  <div class="map-content">
+    <iframe id="mapFrame" src="" allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+
+<!-- Leaderboard Section --> 
+<section class="container2" section id="joinus">
+  <h2>Join the Leaderboards!</h2>
+  <div class="leaderboard-split">
+    <div class="leaderboard-left">
+      <section class="leaderboard">
+        <h2>Why Join?</h2>
+        <p>
+          Because making an impact is better when it’s celebrated. Our leaderboard highlights the eco-champions who donate the most e-waste, turning recycling into something fun and rewarding. 🌳
+        </p>
+        <p>
+          It’s not just about ranking; it’s about creating a movement where recognition inspires action, healthy competition keeps us going, and every effort brings us closer to a greener planet. 💚
+        </p>
+      </section>
+    </div>
+    <div class="leaderboard-right">
+      <section class="signup-section">
+        <h2>Sign Up</h2>
+        <form class="form">
+                <div class="flex">
+                <label>
+                    <input class="input" type="text" placeholder="" required="">
+                    <span>Firstname</span>
+                </label>
+
+                <label>
+                    <input class="input" type="text" placeholder="" required="">
+                    <span>Lastname</span>
+                </label>
+            </div>  
+                    
+            <label>
+                <input class="input" type="email" placeholder="" required="">
+                <span>Email</span>
+            </label> 
+                
+            <label>
+                <input class="input" type="password" placeholder="" required="">
+                <span>Password</span>
+            </label>
+            <label>
+                <input class="input" type="password" placeholder="" required="">
+                <span>Confirm password</span>
+            </label>
+            <button class="submit" onclick="window.location.href='profile.html'">Submit</button>
+            <p class="signin">Already have an acount ? <a href="index.html#home">Signin</a> </p>
+        </form>
+      </section>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Tech2Tree. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+<script>
+function openMap(url) {
+  const modal = document.getElementById("mapModal");
+  const frame = document.getElementById("mapFrame");
+
+  frame.src = url;
+  modal.style.display = "flex";
+}
+
+function closeMap() {
+  const modal = document.getElementById("mapModal");
+  const frame = document.getElementById("mapFrame");
+
+  frame.src = "";
+  modal.style.display = "none";
+}
+
+// close if click outside
+window.addEventListener("click", function(event) {
+  const modal = document.getElementById("mapModal");
+  const content = document.querySelector(".map-content");
+  if (event.target === modal) {
+    closeMap();
+  }
+}); 
+</script>

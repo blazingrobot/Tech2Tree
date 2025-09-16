@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile — Tech2Tree</title>
+    <link rel="stylesheet" href="newsone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="tech.png" alt="Tech2Tree Logo" onclick="window.location.href='index.html'">
+            </div>
+            <ul class="nav-links">
+                <li><a href="profile.html#profile">Profile</a></li>
+                <li><a href="profile.html#donate">Donate</a></li>
+                <li><a href="profile.html#leaderboard">Leaderboards</a></li>
+                <li><a href="profile.html#news">News</a></li>
+            </ul>
+        </nav>
+    </header>
+    </header>
+
+    <section class="container">
+        <img src="img6.jpg" alt="uic">
+        <div class="overlay-text">UIC’s CCS TECHNOSPHERE
+    </section>
+
+
+    <section class="container2">
+        <div class="text-box">
+            <p> In a bold move to unite technology and sustainability, the University of the Immaculate Conception (UIC)
+                College of Computer Studies is set to host CCS TECHNOSPHERE: A Green Computing Drive for a Sustainable
+                Future on September 17, 2025. The event will take place at the ITRC Training Room, L204 & L205, within
+                the UIC Fr. Selga Campus, and is expected to draw students, educators, and tech advocates from across
+                the region.
+                Designed with a green digital theme, CCS TECHNOSPHERE aims to raise awareness about the environmental
+                impact of modern computing and promote practical solutions for reducing electronic waste and energy
+                consumption. The initiative aligns with several United Nations Sustainable Development Goals (SDGs),
+                including responsible consumption, climate action, and sustainable innovation.
+                The event will feature interactive sessions, tech exhibits, and workshops focused on eco-friendly
+                computing practices. Topics include energy-efficient programming, proper e-waste disposal, and the role
+                of green IT in shaping a more sustainable digital future. Attendees will also learn how to integrate
+                sustainability into software development, hardware usage, and IT infrastructure planning.
+                Organizers from the College of Computer Studies emphasized the importance of educating future tech
+                professionals on the environmental consequences of their work. “Green computing isn’t just a trend—it’s
+                a responsibility,” said CCS faculty coordinator Mark Anthony Reyes. “Through CCS TECHNOSPHERE, we want
+                our students to see that innovation and sustainability can go hand in hand.”
+                The event also serves as a platform to showcase student-led projects that tackle real-world
+                environmental challenges using technology. From apps that track carbon footprints to systems that
+                optimize energy use in data centers, the projects reflect UIC’s commitment to producing socially
+                responsible graduates.
+                For more information, interested participants can visit fb.com/uic.ccs or contact the organizers via
+                email at ccs@uic.edu.ph.
+
+
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tech2Tree. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
+<script>
+    // Create overlay dynamically
+    const overlay = document.createElement('div');
+    overlay.id = 'overlay';
+    overlay.style.position = 'fixed';
+    overlay.style.top = 0;
+    overlay.style.left = 0;
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.background = 'rgba(0,0,0,0.8)';
+    overlay.style.display = 'flex';
+    overlay.style.justifyContent = 'center';
+    overlay.style.alignItems = 'center';
+    overlay.style.visibility = 'hidden';
+    overlay.style.opacity = 0;
+    overlay.style.transition = 'opacity 0.3s';
+    overlay.style.zIndex = 1000;
+
+    // Image inside overlay
+    const overlayImg = document.createElement('img');
+    overlayImg.style.maxWidth = '90%';
+    overlayImg.style.maxHeight = '90%';
+    overlayImg.style.borderRadius = '12px';
+    overlayImg.style.boxShadow = '0 0 20px rgba(0,0,0,0.6)';
+    overlay.appendChild(overlayImg);
+    document.body.appendChild(overlay);
+
+    let isOpen = false;
+
+    // Open overlay with clicked image - prevent default behavior
+    document.querySelectorAll('.map-gallery a').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault(); // Prevent default anchor behavior
+            e.stopPropagation();
+
+            const img = link.querySelector('img');
+            overlayImg.src = img.src;
+            overlay.style.visibility = 'visible';
+            overlay.style.opacity = 1;
+            isOpen = true;
+        });
+    });
+
+    // Close overlay on click
+    overlay.addEventListener('click', () => {
+        overlay.style.opacity = 0;
+        setTimeout(() => { overlay.style.visibility = 'hidden'; isOpen = false; }, 300);
+    });     
+</script>

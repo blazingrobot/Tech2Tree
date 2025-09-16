@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile — Tech2Tree</title>
+    <link rel="stylesheet" href="newsone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="tech.png" alt="Tech2Tree Logo" onclick="window.location.href='index.html'">
+            </div>
+            <ul class="nav-links">
+                <li><a href="profile.html#profile">Profile</a></li>
+                <li><a href="profile.html#donate">Donate</a></li>
+                <li><a href="profile.html#leaderboard">Leaderboards</a></li>
+                <li><a href="profile.html#news">News</a></li>
+            </ul>
+        </nav>
+    </header>
+    </header>
+
+    <section class="container">
+        <img src="img5.jpg" alt="uic">
+        <div class="overlay-text">UIC plastic-free university</div>
+    </section>
+
+
+    <section class="container2">
+        <div class="text-box">
+        <p> The University of the Immaculate Conception (UIC) has been officially recognized as a “Plastic-Free School”
+            by the environmental advocacy group Interfacing Development Interventions for Sustainability (IDIS), in
+            celebration of Plastic-Free July 2024. This distinction highlights UIC’s proactive commitment to
+            environmental sustainability, particularly through its early adoption of a campus-wide “No to Single-Use
+            Plastic Policy.”
+            Implemented well before the passage of Davao City’s own ordinance banning single-use plastics, UIC’s policy
+            reflects the institution’s leadership in promoting eco-conscious practices within the academic community.
+            The initiative was spearheaded by the Office of Student Affairs and Services, under the direction of Anaflor
+            E. Sacopayo, and supported by the University Student Government led by Charles Andre F. Nieves.
+            The recognition from IDIS—a non-profit organization dedicated to watershed protection and sustainable
+            development in South Central Mindanao—places UIC among a select group of schools in Davao City that have
+            taken concrete steps to reduce plastic waste on campus. According to IDIS, these institutions serve as
+            models for how educational spaces can contribute meaningfully to environmental protection, even in the
+            absence of formal legislation.
+            UIC’s efforts include banning plastic straws, utensils, and bags within school premises, encouraging
+            reusable alternatives, and conducting awareness campaigns among students and staff. The university’s early
+            compliance with sustainable practices not only earned praise from environmental groups but also positioned
+            it as a frontrunner in the region’s shift toward greener policies.
+            As environmental challenges continue to mount globally, UIC’s recognition serves as a reminder that
+            meaningful change often begins at the grassroots level—with schools, students, and educators leading the
+            way.
+        </p>
+    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tech2Tree. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
+<script>
+    // Create overlay dynamically
+    const overlay = document.createElement('div');
+    overlay.id = 'overlay';
+    overlay.style.position = 'fixed';
+    overlay.style.top = 0;
+    overlay.style.left = 0;
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.background = 'rgba(0,0,0,0.8)';
+    overlay.style.display = 'flex';
+    overlay.style.justifyContent = 'center';
+    overlay.style.alignItems = 'center';
+    overlay.style.visibility = 'hidden';
+    overlay.style.opacity = 0;
+    overlay.style.transition = 'opacity 0.3s';
+    overlay.style.zIndex = 1000;
+
+    // Image inside overlay
+    const overlayImg = document.createElement('img');
+    overlayImg.style.maxWidth = '90%';
+    overlayImg.style.maxHeight = '90%';
+    overlayImg.style.borderRadius = '12px';
+    overlayImg.style.boxShadow = '0 0 20px rgba(0,0,0,0.6)';
+    overlay.appendChild(overlayImg);
+    document.body.appendChild(overlay);
+
+    let isOpen = false;
+
+    // Open overlay with clicked image - prevent default behavior
+    document.querySelectorAll('.map-gallery a').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault(); // Prevent default anchor behavior
+            e.stopPropagation();
+
+            const img = link.querySelector('img');
+            overlayImg.src = img.src;
+            overlay.style.visibility = 'visible';
+            overlay.style.opacity = 1;
+            isOpen = true;
+        });
+    });
+
+    // Close overlay on click
+    overlay.addEventListener('click', () => {
+        overlay.style.opacity = 0;
+        setTimeout(() => { overlay.style.visibility = 'hidden'; isOpen = false; }, 300);
+    });     
+</script>

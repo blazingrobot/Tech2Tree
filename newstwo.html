@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile — Tech2Tree</title>
+    <link rel="stylesheet" href="newsone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="tech.png" alt="Tech2Tree Logo" onclick="window.location.href='index.html'">
+            </div>
+            <ul class="nav-links">
+                <li><a href="profile.html#profile">Profile</a></li>
+                <li><a href="profile.html#donate">Donate</a></li>
+                <li><a href="profile.html#leaderboard">Leaderboards</a></li>
+                <li><a href="profile.html#news">News</a></li>
+            </ul>
+        </nav>
+    </header>
+    </header>
+
+    <section class="container">
+        <img src="img4.jpg" alt="uic">
+        <div class="overlay-text">Tech2Trees Initiative Spurs Surge in Tree Planting and E-Waste Recycling Across Davao
+        </div>
+    </section>
+
+
+    <section class="container2">
+        <div class="text-box">
+            <p> A wave of environmental action is sweeping across Davao City as the Tech2Trees initiative continues to
+                gain momentum, inspiring communities to recycle e-waste in exchange for planting trees. Since its
+                launch, the website—designed to promote responsible disposal of electronic waste—has led to a dramatic
+                increase in both tree planting and recycling efforts, with thousands of mangrove trees now rooted along
+                the city’s coastline.
+                In a recent coastal restoration event, over 3,000 mangrove saplings were planted by volunteers from ASEZ
+                WAO, a global youth group known for its climate action campaigns. Participants donned light blue and
+                yellow vests as they worked together to rehabilitate the shoreline, reinforcing the city’s natural
+                defenses against erosion and storm surges.
+                This event marks one of many community-led efforts fueled by Tech2Trees, a platform that allows users to
+                dispose of old phones, laptops, and other electronics in exchange for tree planting credits. According
+                to organizers, the program has already facilitated the recycling of over 5,000 kilograms of e-waste
+                since its inception, with each device contributing to the planting of up to 20 trees, depending on its
+                condition and recyclability.
+                “The response has been overwhelming,” said Tech2Trees coordinator Maria Liza Fernandez. “People are not
+                only decluttering their homes—they’re actively restoring ecosystems. It’s a win-win for both the
+                environment and the community.”
+                The initiative has partnered with local recyclers and tree-planting organizations to ensure transparency
+                and impact. Users can track their contributions through the website, viewing updates on where their
+                trees are planted and how their recycled devices are processed.
+                Environmental groups like IDIS (Interfacing Development Interventions for Sustainability) have praised
+                the program for bridging digital waste management with climate resilience. “Tech2Trees is a model for
+                how tech and sustainability can work hand in hand,” said IDIS spokesperson Rafael Cruz.
+                As Davao continues to face challenges from climate change and urban waste, programs like Tech2Trees
+                offer a hopeful path forward—one tree, one device at a time.
+
+                Want to add quotes from student leaders or stats from your school’s participation? I can help tailor
+                this even further.
+
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tech2Tree. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
+<script>
+    // Create overlay dynamically
+    const overlay = document.createElement('div');
+    overlay.id = 'overlay';
+    overlay.style.position = 'fixed';
+    overlay.style.top = 0;
+    overlay.style.left = 0;
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.background = 'rgba(0,0,0,0.8)';
+    overlay.style.display = 'flex';
+    overlay.style.justifyContent = 'center';
+    overlay.style.alignItems = 'center';
+    overlay.style.visibility = 'hidden';
+    overlay.style.opacity = 0;
+    overlay.style.transition = 'opacity 0.3s';
+    overlay.style.zIndex = 1000;
+
+    // Image inside overlay
+    const overlayImg = document.createElement('img');
+    overlayImg.style.maxWidth = '90%';
+    overlayImg.style.maxHeight = '90%';
+    overlayImg.style.borderRadius = '12px';
+    overlayImg.style.boxShadow = '0 0 20px rgba(0,0,0,0.6)';
+    overlay.appendChild(overlayImg);
+    document.body.appendChild(overlay);
+
+    let isOpen = false;
+
+    // Open overlay with clicked image - prevent default behavior
+    document.querySelectorAll('.map-gallery a').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault(); // Prevent default anchor behavior
+            e.stopPropagation();
+
+            const img = link.querySelector('img');
+            overlayImg.src = img.src;
+            overlay.style.visibility = 'visible';
+            overlay.style.opacity = 1;
+            isOpen = true;
+        });
+    });
+
+    // Close overlay on click
+    overlay.addEventListener('click', () => {
+        overlay.style.opacity = 0;
+        setTimeout(() => { overlay.style.visibility = 'hidden'; isOpen = false; }, 300);
+    });     
+</script>
